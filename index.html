@@ -15,6 +15,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
+
+    <!-- CONFIGURATION PWA -->
+    <link rel="manifest" href="./manifest.json">
+    <meta name="theme-color" content="#ff681f">
+
 </head>
 
 <body>
@@ -394,6 +399,17 @@
 
 
     <script src="script.js"></script>
+
+    <!-- ENREGISTREMENT DU SERVICE WORKER -->
+    <script>
+        if ("serviceWorker" in navigator) {
+            window.addEventListener("load", () => {
+                navigator.serviceWorker.register("./service-worker.js")
+                    .then(() => console.log("IRON PULSE : application activée !"))
+                    .catch(error => console.error("Erreur PWA :", error));
+            });
+        }
+    </script>
 
 </body>
 </html>

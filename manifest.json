@@ -1,0 +1,28 @@
+
+{
+  "id": "./",
+  "name": "IRON PULSE — Fitness & Discipline",
+  "short_name": "IRON PULSE",
+  "description": "Ton espace dédié au fitness, à la progression et à la discipline.",
+  "lang": "fr",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#080a0d",
+  "theme_color": "#ff681f",
+  "icons": [
+    {
+      "src": "./images/app-icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./images/app-icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

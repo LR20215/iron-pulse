@@ -1,0 +1,399 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="IRON PULSE : découvre le sport, les entraînements, la nutrition et les conseils pour progresser.">
+
+    <title>IRON PULSE | Repousse tes limites</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- BARRE DE NAVIGATION -->
+
+    <header class="header" id="header">
+
+        <a href="#" class="logo">
+            IRON<span>PULSE</span><i>.</i>
+        </a>
+
+        <nav class="nav" id="nav">
+
+            <a href="#accueil" class="nav-link active">Accueil</a>
+            <a href="#disciplines" class="nav-link">Disciplines</a>
+            <a href="#programmes" class="nav-link">Programmes</a>
+            <a href="#nutrition" class="nav-link">Nutrition</a>
+            <a href="#equipements" class="nav-link">Équipements</a>
+            <a href="#conseils" class="nav-link">Conseils</a>
+
+        </nav>
+
+        <a href="#programmes" class="header-button">
+            DÉCOUVRIR <span>↗</span>
+        </a>
+
+        <button class="menu-toggle" id="menu-toggle"
+            aria-label="Ouvrir le menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+    </header>
+
+
+    <!-- ACCUEIL -->
+
+    <main>
+
+        <section class="hero" id="accueil">
+
+            <video class="hero-video" autoplay muted loop playsinline
+                poster="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1920">
+
+                <source src="videos/hero.mp4" type="video/mp4">
+
+            </video>
+
+            <div class="hero-overlay"></div>
+
+            <div class="hero-content">
+
+                <div class="hero-label">
+                    <span class="status-dot"></span>
+                    LE SPORT COMMENCE ICI
+                </div>
+
+                <h1>
+                    REPousse<br>
+                    TES <span>LIMITES.</span>
+                </h1>
+
+                <p class="hero-description">
+                    Entraînement, nutrition et performance.
+                    Découvre une nouvelle façon de vivre le sport
+                    et construis ta propre progression.
+                </p>
+
+                <div class="hero-actions">
+
+                    <a href="#programmes" class="button-primary">
+                        EXPLORER LES PROGRAMMES
+                        <span>↗</span>
+                    </a>
+
+                    <a href="#disciplines" class="button-secondary">
+                        EXPLORER LE SPORT
+                    </a>
+
+                </div>
+
+                <div class="hero-bottom">
+
+                    <div>
+                        <strong>01</strong>
+                        <span>ENTRAÎNEMENT</span>
+                    </div>
+
+                    <div>
+                        <strong>02</strong>
+                        <span>NUTRITION</span>
+                    </div>
+
+                    <div>
+                        <strong>03</strong>
+                        <span>PROGRESSION</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="hero-scroll">
+                <span></span>
+                DÉFILER POUR EXPLORER
+            </div>
+
+        </section>
+
+
+        <!-- INTRODUCTION -->
+
+        <section class="intro section-padding">
+
+            <div class="section-label">
+                <span>01 / NOTRE UNIVERS</span>
+            </div>
+
+            <div class="intro-grid">
+
+                <h2>
+                    PLUS QU'UN SPORT.<br>
+                    <span>UN ÉTAT D'ESPRIT.</span>
+                </h2>
+
+                <p>
+                    Que tu découvres le sport ou que tu pratiques
+                    depuis plusieurs années, IRON PULSE t'accompagne
+                    avec des ressources, des programmes et des conseils
+                    adaptés à ton expérience.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- DISCIPLINES -->
+
+        <section class="disciplines section-padding" id="disciplines">
+
+            <div class="section-heading">
+
+                <div>
+                    <div class="section-label">02 / LES DISCIPLINES</div>
+                    <h2>EXPLORE TON <span>SPORT.</span></h2>
+                </div>
+
+                <p>
+                    Plusieurs disciplines, plusieurs façons
+                    de progresser.
+                </p>
+
+            </div>
+
+            <div class="discipline-grid">
+
+                <article class="discipline-card card-large">
+                    <img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=1000"
+                        alt="Musculation en salle">
+
+                    <div class="card-overlay"></div>
+
+                    <div class="discipline-info">
+                        <span>01 / FORCE</span>
+                        <h3>MUSCULATION</h3>
+                        <p>Développe ta force et maîtrise les mouvements.</p>
+                        <a href="pages/exercices.html">EXPLORER ↗</a>
+                    </div>
+                </article>
+
+                <article class="discipline-card">
+                    <img src="https://images.unsplash.com/photo-1534258936925-c58bed479fcb?w=900"
+                        alt="Entraînement cardio">
+
+                    <div class="card-overlay"></div>
+
+                    <div class="discipline-info">
+                        <span>02 / ENDURANCE</span>
+                        <h3>CARDIO</h3>
+                        <p>Travaille ton endurance progressivement.</p>
+                        <a href="pages/programmes.html">EXPLORER ↗</a>
+                    </div>
+                </article>
+
+                <article class="discipline-card">
+                    <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=900"
+                        alt="Entraînement fonctionnel">
+
+                    <div class="card-overlay"></div>
+
+                    <div class="discipline-info">
+                        <span>03 / PERFORMANCE</span>
+                        <h3>CROSS TRAINING</h3>
+                        <p>Découvre l'entraînement fonctionnel.</p>
+                        <a href="pages/programmes.html">EXPLORER ↗</a>
+                    </div>
+                </article>
+
+                <article class="discipline-card">
+                    <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=900"
+                        alt="Mobilité et étirements">
+
+                    <div class="card-overlay"></div>
+
+                    <div class="discipline-info">
+                        <span>04 / MOBILITÉ</span>
+                        <h3>BIEN-ÊTRE</h3>
+                        <p>Mobilité, récupération et équilibre.</p>
+                        <a href="pages/conseils.html">EXPLORER ↗</a>
+                    </div>
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- PROGRAMMES -->
+
+        <section class="programs section-padding" id="programmes">
+
+            <div class="section-heading">
+
+                <div>
+                    <div class="section-label">03 / NOS PROGRAMMES</div>
+                    <h2>TON PARCOURS.<br><span>TON RYTHME.</span></h2>
+                </div>
+
+                <p>
+                    Des ressources adaptées à ton expérience,
+                    à ton environnement et à tes objectifs de santé.
+                </p>
+
+            </div>
+
+            <div class="program-grid">
+
+                <article class="program-card">
+                    <span class="program-number">01</span>
+                    <div class="program-icon">⌂</div>
+                    <h3>À LA MAISON</h3>
+                    <p>Des séances accessibles avec ou sans matériel.</p>
+                    <a href="pages/programmes.html">DÉCOUVRIR ↗</a>
+                </article>
+
+                <article class="program-card featured">
+                    <span class="program-number">02</span>
+                    <div class="program-icon">✳</div>
+                    <h3>EN SALLE</h3>
+                    <p>Découvre les exercices et les équipements.</p>
+                    <a href="pages/programmes.html">DÉCOUVRIR ↗</a>
+                </article>
+
+                <article class="program-card">
+                    <span class="program-number">03</span>
+                    <div class="program-icon">◈</div>
+                    <h3>ENDURANCE</h3>
+                    <p>Développe progressivement tes capacités physiques.</p>
+                    <a href="pages/programmes.html">DÉCOUVRIR ↗</a>
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- NUTRITION -->
+
+        <section class="nutrition section-padding" id="nutrition">
+
+            <div class="nutrition-content">
+
+                <div class="section-label">04 / NUTRITION</div>
+
+                <h2>
+                    BIEN MANGER.<br>
+                    <span>BIEN VIVRE.</span>
+                </h2>
+
+                <p>
+                    Découvre des recettes faciles, des idées de repas,
+                    des informations nutritionnelles et des conseils
+                    pour adopter une alimentation variée et équilibrée.
+                </p>
+
+                <a href="pages/nutrition.html" class="button-primary">
+                    DÉCOUVRIR LES RECETTES ↗
+                </a>
+
+            </div>
+
+            <div class="nutrition-image">
+                <img src="https://images.unsplash.com/photo-1547592180-85f173990554?w=1200"
+                    alt="Repas équilibré">
+            </div>
+
+        </section>
+
+
+        <!-- EQUIPEMENTS -->
+
+        <section class="equipment section-padding" id="equipements">
+
+            <div class="section-label">05 / MATÉRIEL & ÉQUIPEMENTS</div>
+
+            <h2>CONNAÎTRE SON <span>MATÉRIEL.</span></h2>
+
+            <p>
+                Haltères, machines, accessoires et équipements sportifs :
+                apprends à connaître leur fonctionnement, leurs usages
+                et les précautions à prendre.
+            </p>
+
+            <a href="pages/equipements.html" class="button-primary">
+                EXPLORER LES ÉQUIPEMENTS ↗
+            </a>
+
+        </section>
+
+
+        <!-- CONSEILS -->
+
+        <section class="tips section-padding" id="conseils">
+
+            <div class="section-heading">
+
+                <div>
+                    <div class="section-label">06 / APPRENDRE & PROGRESSER</div>
+                    <h2>LE SAVOIR FAIT <span>LA DIFFÉRENCE.</span></h2>
+                </div>
+
+            </div>
+
+            <div class="tips-grid">
+
+                <article>
+                    <span>01</span>
+                    <h3>TECHNIQUE</h3>
+                    <p>Comprendre les mouvements et leur bonne exécution.</p>
+                </article>
+
+                <article>
+                    <span>02</span>
+                    <h3>RÉCUPÉRATION</h3>
+                    <p>Comprendre l'importance du repos et du sommeil.</p>
+                </article>
+
+                <article>
+                    <span>03</span>
+                    <h3>PROGRESSION</h3>
+                    <p>Apprendre à évoluer sans brûler les étapes.</p>
+                </article>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- PIED DE PAGE -->
+
+    <footer class="footer">
+
+        <a href="#" class="logo">
+            IRON<span>PULSE</span><i>.</i>
+        </a>
+
+        <p>LE SPORT À TON RYTHME. LA PROGRESSION À TA FAÇON.</p>
+
+        <span>© 2026 IRON PULSE — TOUS DROITS RÉSERVÉS.</span>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,576 @@
+
+/* ==========================================
+   IRON PULSE - EXERCISES PAGE
+========================================== */
+
+:root {
+    --exercise-orange: #ff6b1a;
+    --exercise-bg: #0b0b0b;
+    --exercise-card: #151515;
+    --exercise-border: rgba(255,255,255,.09);
+    --exercise-muted: #999;
+}
+
+/* HERO */
+
+.exercise-hero {
+    min-height: 590px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background:
+        linear-gradient(90deg, #080808 0%, rgba(8,8,8,.92) 40%, rgba(8,8,8,.25) 100%),
+        url("https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=1800") center/cover;
+}
+
+.exercise-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(0deg, #0b0b0b 0%, transparent 35%);
+}
+
+.exercise-hero-content {
+    position: relative;
+    z-index: 2;
+    width: min(850px, 90%);
+    padding: 100px 8%;
+}
+
+.exercise-eyebrow {
+    color: var(--exercise-orange);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+
+.exercise-hero h1 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: clamp(65px, 9vw, 115px);
+    line-height: .88;
+    font-weight: 900;
+    margin: 28px 0;
+}
+
+.exercise-hero h1 span,
+.exercise-intro h2 span,
+.exercise-heading h2 span,
+.exercise-technique h2 span {
+    color: var(--exercise-orange);
+}
+
+.exercise-hero-content p {
+    max-width: 570px;
+    color: #bbb;
+    font-size: 15px;
+    line-height: 1.9;
+    margin-bottom: 32px;
+}
+
+.exercise-hero-index {
+    position: absolute;
+    right: 7%;
+    bottom: 55px;
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    color: #aaa;
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+.exercise-hero-index span:nth-child(odd) {
+    color: var(--exercise-orange);
+    font-weight: 900;
+}
+
+/* INTRODUCTION */
+
+.exercise-intro-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 70px;
+    align-items: center;
+    margin-top: 35px;
+}
+
+.exercise-intro h2,
+.exercise-technique h2 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: clamp(40px, 5vw, 66px);
+    line-height: .95;
+    font-weight: 900;
+}
+
+.exercise-intro-grid p {
+    color: var(--exercise-muted);
+    line-height: 1.9;
+    font-size: 14px;
+}
+
+/* CATÉGORIES */
+
+.exercise-categories {
+    background: #101010;
+}
+
+.exercise-category-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 14px;
+    margin-top: 40px;
+}
+
+.exercise-category {
+    min-height: 155px;
+    padding: 22px 16px;
+    text-align: left;
+    background: var(--exercise-card);
+    border: 1px solid var(--exercise-border);
+    color: white;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    transition: .25s ease;
+}
+
+.exercise-category > span {
+    color: var(--exercise-orange);
+    font-size: 28px;
+}
+
+.exercise-category strong {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 19px;
+}
+
+.exercise-category small {
+    color: #888;
+    font-size: 10px;
+}
+
+.exercise-category:hover,
+.exercise-category.active {
+    border-color: var(--exercise-orange);
+    background: #1c1713;
+    transform: translateY(-4px);
+}
+
+/* BARRE DE RECHERCHE */
+
+.exercise-toolbar {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr auto;
+    gap: 12px;
+    margin: 35px 0 25px;
+}
+
+.exercise-search {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #171717;
+    border: 1px solid var(--exercise-border);
+    padding: 0 16px;
+    min-height: 50px;
+}
+
+.exercise-search span {
+    color: var(--exercise-orange);
+    font-size: 24px;
+}
+
+.exercise-search input {
+    width: 100%;
+    background: transparent;
+    color: white;
+    border: none;
+    outline: none;
+    font: inherit;
+    font-size: 12px;
+}
+
+.exercise-toolbar select {
+    min-width: 0;
+    padding: 0 12px;
+    background: #171717;
+    color: #ddd;
+    border: 1px solid var(--exercise-border);
+    font: inherit;
+    font-size: 11px;
+}
+
+.exercise-toolbar select option {
+    background: #171717;
+    color: white;
+}
+
+.exercise-reset {
+    padding: 0 17px;
+    background: transparent;
+    color: var(--exercise-orange);
+    border: 1px solid var(--exercise-orange);
+    font-size: 10px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.exercise-reset:hover {
+    background: var(--exercise-orange);
+    color: white;
+}
+
+.exercise-results {
+    display: flex;
+    justify-content: space-between;
+    padding: 17px 0;
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--exercise-border);
+    color: #888;
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+.exercise-results span:first-child {
+    color: white;
+}
+
+/* CARTES */
+
+.exercise-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.exercise-card {
+    position: relative;
+    background: var(--exercise-card);
+    border: 1px solid var(--exercise-border);
+    overflow: hidden;
+    transition: .3s ease;
+    cursor: pointer;
+}
+
+.exercise-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--exercise-orange);
+}
+
+.exercise-card-image {
+    height: 220px;
+    position: relative;
+    overflow: hidden;
+    background: #222;
+}
+
+.exercise-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .5s ease;
+}
+
+.exercise-card:hover .exercise-card-image img {
+    transform: scale(1.06);
+}
+
+.exercise-card-category {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    background: var(--exercise-orange);
+    color: white;
+    padding: 7px 10px;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.exercise-card-body {
+    padding: 23px;
+}
+
+.exercise-card-body h3 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 27px;
+    margin-bottom: 8px;
+}
+
+.exercise-card-body p {
+    color: #999;
+    font-size: 12px;
+    line-height: 1.7;
+    min-height: 42px;
+}
+
+.exercise-card-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 17px 0;
+}
+
+.exercise-card-meta span {
+    color: #aaa;
+    background: #222;
+    padding: 6px 9px;
+    font-size: 9px;
+}
+
+.exercise-card-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 15px;
+    border-top: 1px solid var(--exercise-border);
+    color: var(--exercise-orange);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.exercise-loading,
+.exercise-empty {
+    grid-column: 1 / -1;
+    padding: 60px 20px;
+    text-align: center;
+    color: #999;
+}
+
+.exercise-empty h3 {
+    color: white;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+/* FENÊTRE DÉTAILLÉE */
+
+.exercise-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.exercise-modal.open {
+    display: flex;
+}
+
+.exercise-modal-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,.85);
+    backdrop-filter: blur(8px);
+}
+
+.exercise-modal-content {
+    position: relative;
+    z-index: 2;
+    width: min(900px, 100%);
+    max-height: 90vh;
+    overflow-y: auto;
+    background: #141414;
+    border: 1px solid var(--exercise-border);
+    padding: 35px;
+}
+
+.exercise-modal-close {
+    position: sticky;
+    top: 0;
+    float: right;
+    z-index: 3;
+    width: 40px;
+    height: 40px;
+    background: #252525;
+    border: none;
+    color: white;
+    font-size: 27px;
+    cursor: pointer;
+}
+
+.exercise-detail-cover {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    margin: 15px 0 25px;
+}
+
+.exercise-detail-category {
+    color: var(--exercise-orange);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.exercise-detail-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: clamp(38px, 6vw, 60px);
+    line-height: 1;
+    margin: 12px 0;
+}
+
+.exercise-detail-description {
+    color: #aaa;
+    line-height: 1.8;
+    font-size: 13px;
+    margin-bottom: 25px;
+}
+
+.exercise-detail-section {
+    padding: 22px 0;
+    border-top: 1px solid var(--exercise-border);
+}
+
+.exercise-detail-section h3 {
+    color: var(--exercise-orange);
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 24px;
+    margin-bottom: 12px;
+}
+
+.exercise-detail-section p,
+.exercise-detail-section li {
+    color: #bbb;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.exercise-detail-section ul {
+    padding-left: 20px;
+}
+
+.exercise-detail-warning {
+    background: #241810;
+    border-left: 3px solid var(--exercise-orange);
+    padding: 17px;
+    margin-top: 20px;
+    color: #ddd;
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+/* TECHNIQUE */
+
+.exercise-technique {
+    background: #101010;
+}
+
+.exercise-technique > h2 {
+    margin-top: 25px;
+}
+
+.exercise-technique-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-top: 45px;
+}
+
+.exercise-technique-grid article {
+    padding: 28px;
+    background: #171717;
+    border: 1px solid var(--exercise-border);
+}
+
+.exercise-technique-grid article > span {
+    color: var(--exercise-orange);
+    font-size: 12px;
+    font-weight: 900;
+}
+
+.exercise-technique-grid h3 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 25px;
+    margin: 20px 0 10px;
+}
+
+.exercise-technique-grid p {
+    color: #999;
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1000px) {
+
+    .exercise-category-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .exercise-toolbar {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .exercise-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 700px) {
+
+    .exercise-hero {
+        min-height: 550px;
+        background-position: 60% center;
+    }
+
+    .exercise-hero-content {
+        padding: 90px 7%;
+    }
+
+    .exercise-hero-index {
+        display: none;
+    }
+
+    .exercise-intro-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .exercise-category-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .exercise-toolbar {
+        grid-template-columns: 1fr;
+    }
+
+    .exercise-toolbar select,
+    .exercise-reset {
+        min-height: 48px;
+    }
+
+    .exercise-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .exercise-technique-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .exercise-modal-content {
+        padding: 20px;
+    }
+
+    .exercise-detail-cover {
+        height: 210px;
+    }
+
+}
+
+@media (max-width: 380px) {
+
+    .exercise-category-grid {
+        grid-template-columns: 1fr;
+    }
+
+}

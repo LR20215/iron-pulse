@@ -1,0 +1,961 @@
+
+/* ==========================================
+   IRON PULSE — NUTRITION
+========================================== */
+
+:root {
+    --nutrition-orange: #ff6b00;
+    --nutrition-orange-light: #ff8c32;
+    --nutrition-dark: #090909;
+    --nutrition-card: #141414;
+    --nutrition-white: #f5f5f5;
+    --nutrition-muted: #a5a5a5;
+}
+
+/* GLOBAL */
+
+.nutrition-hero,
+.nutrition-intro,
+.nutrition-fundamentals,
+.nutrition-hydration,
+.nutrition-training,
+.nutrition-meals,
+.nutrition-recovery,
+.nutrition-final,
+.nutrition-disclaimer {
+    position: relative;
+}
+
+/* HERO */
+
+.nutrition-hero {
+    min-height: 690px;
+    display: flex;
+    align-items: center;
+    padding: 120px 9%;
+    overflow: hidden;
+
+    background:
+        linear-gradient(90deg, rgba(0,0,0,.95), rgba(0,0,0,.55), rgba(0,0,0,.2)),
+        url("https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=2000&q=90");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.nutrition-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(0deg, #090909 0%, transparent 35%);
+    pointer-events: none;
+}
+
+.nutrition-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 760px;
+}
+
+.nutrition-hero-content h1 {
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: clamp(65px, 9vw, 120px);
+    line-height: .91;
+    font-weight: 900;
+    margin: 25px 0;
+    color: white;
+    letter-spacing: -2px;
+}
+
+.nutrition-hero-content h1 span,
+.nutrition-intro-text h2 span,
+.section-heading h2 span,
+.nutrition-hydration-content h2 span,
+.nutrition-recovery-content h2 span,
+.nutrition-final h2 span {
+    color: var(--nutrition-orange);
+}
+
+.nutrition-hero-content p {
+    max-width: 560px;
+    color: #d0d0d0;
+    font-size: 17px;
+    line-height: 1.8;
+    margin-bottom: 35px;
+}
+
+.nutrition-hero-tag {
+    position: absolute;
+    bottom: 35px;
+    right: 9%;
+    color: rgba(255,255,255,.65);
+    font-size: 11px;
+    letter-spacing: 3px;
+}
+
+/* INTRODUCTION */
+
+.nutrition-intro {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 75px;
+}
+
+.nutrition-intro-text h2,
+.nutrition-hydration-content h2,
+.nutrition-recovery-content h2 {
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: clamp(45px, 5vw, 70px);
+    line-height: .98;
+    font-weight: 800;
+    margin: 22px 0;
+}
+
+.nutrition-intro-text p,
+.nutrition-hydration-content > p,
+.nutrition-recovery-content > p {
+    color: var(--nutrition-muted);
+    line-height: 1.9;
+    font-size: 15px;
+    margin-bottom: 18px;
+}
+
+.nutrition-intro-image {
+    height: 440px;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.nutrition-intro-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .6s ease;
+}
+
+.nutrition-intro-image:hover img {
+    transform: scale(1.05);
+}
+
+/* SECTION HEADINGS */
+
+.section-heading {
+    max-width: 760px;
+    margin: 0 auto 60px;
+    text-align: center;
+}
+
+.section-heading h2 {
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: clamp(42px, 5vw, 68px);
+    font-weight: 800;
+    line-height: 1;
+    margin: 18px 0;
+}
+
+.section-heading p {
+    color: var(--nutrition-muted);
+    line-height: 1.8;
+    font-size: 15px;
+}
+
+/* MACRONUTRIENTS */
+
+.nutrition-fundamentals {
+    background: #0d0d0d;
+}
+
+.nutrition-macro-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.nutrition-macro-card {
+    background: var(--nutrition-card);
+    border: 1px solid rgba(255,255,255,.06);
+    overflow: hidden;
+    transition: transform .3s ease, border-color .3s ease;
+}
+
+.nutrition-macro-card:hover {
+    transform: translateY(-7px);
+    border-color: var(--nutrition-orange);
+}
+
+.nutrition-macro-image {
+    height: 230px;
+    overflow: hidden;
+}
+
+.nutrition-macro-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .5s ease;
+}
+
+.nutrition-macro-card:hover .nutrition-macro-image img {
+    transform: scale(1.07);
+}
+
+.nutrition-macro-content {
+    padding: 30px;
+}
+
+.nutrition-macro-content > span {
+    color: var(--nutrition-orange);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.nutrition-macro-content h3 {
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 34px;
+    margin: 12px 0;
+    color: white;
+}
+
+.nutrition-macro-content p {
+    color: var(--nutrition-muted);
+    line-height: 1.8;
+    font-size: 14px;
+    min-height: 76px;
+}
+
+.nutrition-macro-content h4 {
+    color: white;
+    margin: 25px 0 12px;
+    font-size: 13px;
+}
+
+.nutrition-macro-content ul {
+    padding-left: 18px;
+    color: var(--nutrition-muted);
+    line-height: 2;
+    font-size: 13px;
+}
+
+.nutrition-macro-content li::marker {
+    color: var(--nutrition-orange);
+}
+
+/* HYDRATATION */
+
+.nutrition-hydration {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 75px;
+    align-items: center;
+    background: #090909;
+}
+
+.nutrition-hydration-image {
+    height: 540px;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.nutrition-hydration-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.nutrition-info-line {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(255,255,255,.1);
+}
+
+.nutrition-info-line span {
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 28px;
+    color: var(--nutrition-orange);
+    font-weight: 800;
+}
+
+.nutrition-info-line p {
+    color: #ddd;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+/* AUTOUR DE L'ENTRAÎNEMENT */
+
+.nutrition-training {
+    background: #101010;
+}
+
+.nutrition-training-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.nutrition-training-card {
+    position: relative;
+    background: #181818;
+    padding: 40px 32px;
+    min-height: 300px;
+    border: 1px solid rgba(255,255,255,.05);
+    transition: .3s ease;
+}
+
+.nutrition-training-card:hover {
+    border-color: var(--nutrition-orange);
+    transform: translateY(-5px);
+}
+
+.nutrition-training-number {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    color: rgba(255,255,255,.1);
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 65px;
+    font-weight: 900;
+}
+
+.nutrition-training-icon {
+    font-size: 35px;
+    margin-bottom: 25px;
+}
+
+.nutrition-training-card h3 {
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 34px;
+    margin-bottom: 15px;
+    color: white;
+}
+
+.nutrition-training-card p {
+    color: var(--nutrition-muted);
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+/* REPAS */
+
+.nutrition-meals {
+    background: #090909;
+}
+
+.nutrition-meal-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.nutrition-meal-card {
+    background: var(--nutrition-card);
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,.06);
+    transition: .3s ease;
+}
+
+.nutrition-meal-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--nutrition-orange);
+}
+
+.nutrition-meal-card > img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    display: block;
+}
+
+.nutrition-meal-content {
+    padding: 27px;
+}
+
+.nutrition-meal-content span {
+    color: var(--nutrition-orange);
+    font-size: 11px;
+    letter-spacing: 2px;
+    font-weight: 800;
+}
+
+.nutrition-meal-content h3 {
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 30px;
+    margin: 12px 0;
+}
+
+.nutrition-meal-content p {
+    color: var(--nutrition-muted);
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+/* RÉCUPÉRATION */
+
+.nutrition-recovery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 75px;
+    align-items: center;
+    background: #101010;
+}
+
+.nutrition-recovery-image {
+    height: 480px;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.nutrition-recovery-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.nutrition-recovery-points {
+    margin-top: 35px;
+}
+
+.nutrition-recovery-points > div {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 18px 0;
+    border-bottom: 1px solid rgba(255,255,255,.1);
+}
+
+.nutrition-recovery-points span {
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 27px;
+    color: var(--nutrition-orange);
+    font-weight: 800;
+}
+
+.nutrition-recovery-points p {
+    color: #ddd;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+/* FINAL */
+
+.nutrition-final {
+    text-align: center;
+    padding-top: 120px;
+    padding-bottom: 120px;
+    background:
+        linear-gradient(rgba(0,0,0,.85), rgba(0,0,0,.9)),
+        url("https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=1800&q=85");
+
+    background-position: center;
+    background-size: cover;
+}
+
+.nutrition-final h2 {
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: clamp(55px, 8vw, 100px);
+    line-height: .93;
+    margin: 25px 0;
+    font-weight: 900;
+}
+
+.nutrition-final p {
+    max-width: 600px;
+    margin: 0 auto 30px;
+    color: #ccc;
+    line-height: 1.8;
+    font-size: 15px;
+}
+
+/* NOTE */
+
+.nutrition-disclaimer {
+    padding: 25px 9%;
+    background: #151515;
+    border-top: 1px solid rgba(255,255,255,.07);
+}
+
+.nutrition-disclaimer p {
+    max-width: 1100px;
+    margin: auto;
+    color: #999;
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+.nutrition-disclaimer strong {
+    color: var(--nutrition-orange);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1000px) {
+
+    .nutrition-intro,
+    .nutrition-hydration,
+    .nutrition-recovery {
+        gap: 40px;
+    }
+
+    .nutrition-macro-grid,
+    .nutrition-training-grid,
+    .nutrition-meal-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 700px) {
+
+    .nutrition-hero {
+        min-height: 600px;
+        padding: 100px 7%;
+    }
+
+    .nutrition-hero-content h1 {
+        font-size: 65px;
+    }
+
+    .nutrition-hero-content p {
+        font-size: 14px;
+    }
+
+    .nutrition-hero-tag {
+        right: 7%;
+        font-size: 9px;
+    }
+
+    .nutrition-intro,
+    .nutrition-hydration,
+    .nutrition-recovery {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .nutrition-intro-image,
+    .nutrition-hydration-image,
+    .nutrition-recovery-image {
+        height: 320px;
+    }
+
+    .nutrition-macro-grid,
+    .nutrition-training-grid,
+    .nutrition-meal-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .nutrition-macro-content p {
+        min-height: auto;
+    }
+
+    .nutrition-final {
+        padding-top: 85px;
+        padding-bottom: 85px;
+    }
+
+}
+
+@media (max-width: 420px) {
+
+    .nutrition-hero-content h1 {
+        font-size: 53px;
+    }
+
+    .nutrition-intro-text h2,
+    .nutrition-hydration-content h2,
+    .nutrition-recovery-content h2 {
+        font-size: 45px;
+    }
+
+    .nutrition-macro-content,
+    .nutrition-meal-content {
+        padding: 22px;
+    }
+
+}
+
+
+/* ==========================================
+   IRON PULSE — RECETTES
+========================================== */
+
+.nutrition-recipes {
+    background: #0d0d0d;
+}
+
+.recipe-toolbar {
+    display: grid;
+    grid-template-columns: 1fr 250px auto;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.recipe-toolbar input,
+.recipe-toolbar select {
+    width: 100%;
+    min-width: 0;
+    padding: 16px 18px;
+    color: white;
+    background: #191919;
+    border: 1px solid #333;
+    outline: none;
+    font: inherit;
+}
+
+.recipe-toolbar input:focus,
+.recipe-toolbar select:focus {
+    border-color: #ff6b00;
+}
+
+.recipe-toolbar select option {
+    background: #191919;
+}
+
+.recipe-toolbar button {
+    padding: 15px 22px;
+    border: 1px solid #ff6b00;
+    color: #ff6b00;
+    background: transparent;
+    cursor: pointer;
+    font-weight: 700;
+    transition: .2s;
+}
+
+.recipe-toolbar button:hover {
+    background: #ff6b00;
+    color: white;
+}
+
+.recipe-count {
+    color: #ff6b00;
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+.recipe-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.recipe-card {
+    background: #171717;
+    border: 1px solid rgba(255,255,255,.06);
+    overflow: hidden;
+    transition: .3s ease;
+}
+
+.recipe-card:hover {
+    transform: translateY(-6px);
+    border-color: #ff6b00;
+}
+
+.recipe-card-image {
+    position: relative;
+    height: 220px;
+    overflow: hidden;
+}
+
+.recipe-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .5s;
+}
+
+.recipe-card:hover .recipe-card-image img {
+    transform: scale(1.06);
+}
+
+.recipe-card-image > span {
+    position: absolute;
+    left: 15px;
+    bottom: 15px;
+    padding: 7px 12px;
+    background: #ff6b00;
+    color: white;
+    font-size: 11px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.recipe-card-content {
+    padding: 25px;
+}
+
+.recipe-card-meta,
+.recipe-detail-meta {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    color: #ff8c32;
+    font-size: 12px;
+    margin-bottom: 15px;
+}
+
+.recipe-card-content h3 {
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 29px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.recipe-card-content p {
+    min-height: 55px;
+    color: #aaa;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.recipe-open-button {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    padding: 14px 0 0;
+    background: transparent;
+    border: 0;
+    border-top: 1px solid #333;
+    color: #ff8c32;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.recipe-open-button span {
+    font-size: 20px;
+}
+
+.recipe-empty {
+    text-align: center;
+    padding: 60px 20px;
+    color: #aaa;
+}
+
+.recipe-empty h3 {
+    color: white;
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.recipe-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+}
+
+.recipe-modal.open {
+    display: flex;
+}
+
+.recipe-modal-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,.85);
+    backdrop-filter: blur(5px);
+}
+
+.recipe-modal-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 760px;
+    max-height: 90vh;
+    overflow-y: auto;
+    background: #151515;
+    border: 1px solid #333;
+}
+
+.recipe-modal-close {
+    position: sticky;
+    top: 12px;
+    float: right;
+    z-index: 5;
+    margin: 12px 12px -55px 0;
+    width: 42px;
+    height: 42px;
+    border: 0;
+    background: #ff6b00;
+    color: white;
+    font-size: 27px;
+    cursor: pointer;
+}
+
+.recipe-detail-image {
+    height: 300px;
+}
+
+.recipe-detail-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.recipe-detail-content {
+    padding: 35px;
+}
+
+.recipe-detail-category {
+    color: #ff6b00;
+    font-size: 12px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.recipe-detail-content h2 {
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 45px;
+    color: white;
+    margin: 12px 0;
+}
+
+.recipe-detail-content > p {
+    color: #aaa;
+    line-height: 1.8;
+}
+
+.recipe-detail-meta {
+    justify-content: flex-start;
+    margin: 20px 0;
+}
+
+.recipe-detail-section {
+    padding: 25px 0;
+    border-top: 1px solid #333;
+}
+
+.recipe-detail-section h3 {
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 28px;
+    color: #ff8c32;
+    margin-bottom: 15px;
+}
+
+.recipe-detail-section ul,
+.recipe-detail-section ol {
+    padding-left: 22px;
+    color: #ddd;
+    line-height: 2;
+    font-size: 14px;
+}
+
+.recipe-detail-section li::marker {
+    color: #ff6b00;
+}
+
+.recipe-detail-content .recipe-detail-note {
+    padding: 15px;
+    background: #202020;
+    border-left: 3px solid #ff6b00;
+    font-size: 12px;
+}
+
+@media (max-width: 900px) {
+    .recipe-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .recipe-toolbar {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .recipe-toolbar button {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (max-width: 600px) {
+    .recipe-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .recipe-toolbar {
+        grid-template-columns: 1fr;
+    }
+
+    .recipe-toolbar button {
+        grid-column: auto;
+    }
+
+    .recipe-detail-content {
+        padding: 22px;
+    }
+
+    .recipe-detail-content h2 {
+        font-size: 36px;
+    }
+
+    .recipe-detail-image {
+        height: 210px;
+    }
+}
+
+
+/* ==========================================
+   IRON PULSE — ORGANISATION DES CATÉGORIES
+========================================== */
+
+.recipe-grid {
+    display: block;
+}
+
+.recipe-category-group {
+    margin-bottom: 65px;
+}
+
+.recipe-category-heading {
+    margin-bottom: 30px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid rgba(255,255,255,.12);
+}
+
+.recipe-category-heading h3 {
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 42px;
+    color: white;
+    margin-top: 12px;
+    text-transform: uppercase;
+}
+
+.recipe-category-heading h3 span {
+    color: #ff6b00;
+}
+
+.recipe-category-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.recipe-card-content h4 {
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 29px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+@media (max-width: 900px) {
+    .recipe-category-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .recipe-category-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .recipe-category-heading h3 {
+        font-size: 34px;
+    }
+}
+

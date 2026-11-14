@@ -1,0 +1,779 @@
+
+/* =====================================================
+   IRON PULSE — ÉQUIPEMENTS
+   Design premium / Dark / Orange
+===================================================== */
+
+:root {
+    --eq-orange: #ff681f;
+    --eq-orange-light: #ff8a45;
+    --eq-bg: #080a0d;
+    --eq-card: #11151b;
+    --eq-card-light: #191e25;
+    --eq-border: rgba(255,255,255,0.09);
+    --eq-text: #f5f5f5;
+    --eq-muted: #a1a8b2;
+}
+
+/* BASE */
+
+body {
+    background: var(--eq-bg);
+}
+
+.equipment-hero,
+.equipment-intro,
+.equipment-categories,
+.equipment-filters,
+.equipment-section,
+.equipment-home,
+.equipment-safety {
+    position: relative;
+    overflow: hidden;
+}
+
+.equipment-hero .container,
+.equipment-intro .container,
+.equipment-categories .container,
+.equipment-filters .container,
+.equipment-section .container,
+.equipment-home .container,
+.equipment-safety .container {
+    width: min(1200px, 90%);
+    margin: auto;
+}
+
+.equipment-hero {
+    min-height: 480px;
+    display: flex;
+    align-items: center;
+    padding: 100px 0;
+    background:
+        linear-gradient(90deg, rgba(5,7,10,.98) 0%, rgba(5,7,10,.85) 43%, rgba(5,7,10,.2) 100%),
+        url("https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?auto=format&fit=crop&w=1800&q=85")
+        center 48% / cover no-repeat;
+    border-bottom: 1px solid var(--eq-border);
+}
+
+.equipment-hero .container {
+    position: relative;
+    z-index: 2;
+}
+
+.section-tag {
+    display: inline-block;
+    color: var(--eq-orange);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.equipment-hero h1 {
+    max-width: 750px;
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: clamp(48px, 7vw, 88px);
+    font-weight: 900;
+    line-height: .98;
+    text-transform: uppercase;
+    margin: 0 0 22px;
+    color: white;
+}
+
+.equipment-hero h1 span,
+.equipment-intro h2 span,
+.section-heading h2 span,
+.equipment-home h2 span,
+.equipment-safety h2 span {
+    color: var(--eq-orange);
+}
+
+.equipment-hero p {
+    max-width: 520px;
+    color: #d1d4d8;
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.equipment-hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(0deg, rgba(8,10,13,.35), transparent 35%);
+    pointer-events: none;
+}
+
+/* INTRODUCTION */
+
+.section-padding {
+    padding: 85px 0;
+}
+
+.equipment-intro {
+    background: #0c1015;
+    border-bottom: 1px solid var(--eq-border);
+}
+
+.equipment-intro h2,
+.equipment-home h2,
+.equipment-safety h2,
+.section-heading h2 {
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: clamp(32px, 4vw, 48px);
+    font-weight: 800;
+    line-height: 1.05;
+    margin: 0 0 22px;
+    color: white;
+    text-transform: uppercase;
+}
+
+.equipment-intro p {
+    max-width: 850px;
+    color: var(--eq-muted);
+    font-size: 15px;
+    line-height: 1.9;
+    margin: 12px 0;
+}
+
+/* TITRES DE SECTION */
+
+.section-heading {
+    margin-bottom: 35px;
+}
+
+.section-heading p {
+    color: var(--eq-muted);
+    line-height: 1.8;
+    margin-top: 10px;
+}
+
+/* CATÉGORIES */
+
+.equipment-categories {
+    background: var(--eq-bg);
+}
+
+.equipment-category-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.equipment-category-card {
+    min-height: 205px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 25px;
+    text-decoration: none;
+    color: white;
+    background:
+        linear-gradient(0deg, rgba(10,13,17,.98), rgba(10,13,17,.55)),
+        var(--eq-card);
+    border: 1px solid var(--eq-border);
+    border-radius: 12px;
+    transition: .3s ease;
+}
+
+.equipment-category-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--eq-orange);
+    background-color: #191c22;
+}
+
+.category-number {
+    color: var(--eq-orange);
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 35px;
+    font-weight: 800;
+    margin-bottom: auto;
+}
+
+.equipment-category-card h3 {
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 25px;
+    margin: 15px 0 8px;
+}
+
+.equipment-category-card p {
+    color: var(--eq-muted);
+    font-size: 13px;
+    line-height: 1.6;
+    margin: 0 0 18px;
+}
+
+.category-link {
+    color: var(--eq-orange);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+/* RECHERCHE ET FILTRES */
+
+.equipment-filters {
+    padding: 55px 0;
+    background: #0e1218;
+    border-top: 1px solid var(--eq-border);
+    border-bottom: 1px solid var(--eq-border);
+}
+
+.equipment-filters .section-heading {
+    margin-bottom: 25px;
+}
+
+.equipment-filter-toolbar {
+    display: grid;
+    grid-template-columns: minmax(200px, 1fr) 260px auto;
+    gap: 14px;
+    align-items: center;
+    padding: 18px;
+    background: #151a21;
+    border: 1px solid var(--eq-border);
+    border-radius: 14px;
+}
+
+.equipment-filter-toolbar input,
+.equipment-filter-toolbar select {
+    width: 100%;
+    min-width: 0;
+    height: 54px;
+    padding: 0 18px;
+    color: white;
+    background: #090d12;
+    border: 1px solid #303945;
+    border-radius: 9px;
+    outline: none;
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    transition: .25s ease;
+}
+
+.equipment-filter-toolbar input::placeholder {
+    color: #7e8995;
+}
+
+.equipment-filter-toolbar input:focus,
+.equipment-filter-toolbar select:focus {
+    border-color: var(--eq-orange);
+    box-shadow: 0 0 0 3px rgba(255,104,31,.12);
+}
+
+.equipment-filter-toolbar select {
+    cursor: pointer;
+    color-scheme: dark;
+}
+
+.equipment-filter-toolbar button {
+    height: 54px;
+    padding: 0 22px;
+    color: var(--eq-orange);
+    background: transparent;
+    border: 1px solid var(--eq-orange);
+    border-radius: 9px;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: .7px;
+    cursor: pointer;
+    transition: .25s ease;
+}
+
+.equipment-filter-toolbar button:hover {
+    color: white;
+    background: var(--eq-orange);
+}
+
+.equipment-count {
+    color: var(--eq-muted);
+    font-size: 13px;
+    margin: 18px 4px 0;
+}
+
+.equipment-empty {
+    color: var(--eq-orange);
+    padding: 25px 0;
+    font-size: 15px;
+}
+
+/* CARTES ÉQUIPEMENTS */
+
+.equipment-section {
+    background: var(--eq-bg);
+}
+
+.equipment-section-alt {
+    background: #0d1117;
+}
+
+.equipment-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.equipment-product-card {
+    position: relative;
+    min-width: 0;
+    overflow: hidden;
+    background: var(--eq-card);
+    border: 1px solid var(--eq-border);
+    border-radius: 12px;
+    transition: transform .3s ease, border-color .3s ease;
+}
+
+.equipment-product-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(255,104,31,.65);
+}
+
+/* Images automatiques des fiches */
+
+.equipment-product-card::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 185px;
+    background-size: cover;
+    background-position: center;
+    background-color: #20252c;
+    border-bottom: 1px solid var(--eq-border);
+    transition: transform .4s ease;
+}
+
+.equipment-product-card:hover::before {
+    background-size: 108%;
+}
+
+/* Images musculation */
+
+#musculation .equipment-product-card:nth-child(1)::before {
+    background-image: url("https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?auto=format&fit=crop&w=700&q=85");
+}
+
+#musculation .equipment-product-card:nth-child(2)::before {
+    background-image: url("https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=700&q=85");
+}
+
+#musculation .equipment-product-card:nth-child(3)::before {
+    background-image: url("https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=700&q=85");
+}
+
+#musculation .equipment-product-card:nth-child(4)::before {
+    background-image: url("https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?auto=format&fit=crop&w=700&q=85");
+}
+
+/* Images cardio */
+
+#cardio .equipment-product-card:nth-child(1)::before {
+    background-image: url("https://images.unsplash.com/photo-1576678927484-cc907957088c?auto=format&fit=crop&w=700&q=85");
+}
+
+#cardio .equipment-product-card:nth-child(2)::before {
+    background-image: url("https://images.unsplash.com/photo-1593079831268-3381b0db4a77?auto=format&fit=crop&w=700&q=85");
+}
+
+#cardio .equipment-product-card:nth-child(3)::before {
+    background-image: url("https://images.unsplash.com/photo-1540497077202-7c8a3999166f?auto=format&fit=crop&w=700&q=85");
+}
+
+/* Images accessoires */
+
+#accessoires .equipment-product-card:nth-child(1)::before {
+    background-image: url("https://images.unsplash.com/photo-1598289431512-b97b0917affc?auto=format&fit=crop&w=700&q=85");
+}
+
+#accessoires .equipment-product-card:nth-child(2)::before {
+    background-image: url("https://images.unsplash.com/photo-1599058917212-d750089bc07c?auto=format&fit=crop&w=700&q=85");
+}
+
+#accessoires .equipment-product-card:nth-child(3)::before {
+    background-image: url("https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=700&q=85");
+}
+
+.equipment-card-number {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    z-index: 2;
+    padding: 6px 10px;
+    color: white;
+    background: rgba(8,10,13,.85);
+    border: 1px solid rgba(255,255,255,.15);
+    border-radius: 5px;
+    font-size: 11px;
+    font-weight: 800;
+}
+
+.equipment-card-content {
+    padding: 22px;
+}
+
+.equipment-type {
+    display: inline-block;
+    color: var(--eq-orange);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    margin-bottom: 10px;
+}
+
+.equipment-card-content h3 {
+    color: white;
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 1.1;
+    margin: 0 0 13px;
+}
+
+.equipment-card-content p {
+    color: var(--eq-muted);
+    font-size: 13px;
+    line-height: 1.8;
+    margin: 0 0 18px;
+}
+
+.equipment-card-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.equipment-card-content li {
+    position: relative;
+    color: #c6cbd2;
+    font-size: 12px;
+    line-height: 1.6;
+    padding: 8px 0 8px 19px;
+    border-top: 1px solid rgba(255,255,255,.06);
+}
+
+.equipment-card-content li::before {
+    content: "›";
+    position: absolute;
+    left: 2px;
+    color: var(--eq-orange);
+    font-size: 17px;
+    font-weight: 800;
+}
+
+/* HOME TRAINING */
+
+.equipment-home {
+    background:
+        linear-gradient(90deg, rgba(8,10,13,.98), rgba(8,10,13,.85)),
+        url("https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1600&q=85")
+        center / cover;
+    border-top: 1px solid var(--eq-border);
+    border-bottom: 1px solid var(--eq-border);
+}
+
+.equipment-home > .container > p {
+    max-width: 800px;
+    color: var(--eq-muted);
+    font-size: 15px;
+    line-height: 1.9;
+    margin-bottom: 35px;
+}
+
+.equipment-home-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.equipment-home-item {
+    padding: 25px;
+    background: rgba(17,21,27,.85);
+    border: 1px solid var(--eq-border);
+    border-radius: 10px;
+}
+
+.equipment-home-item h3 {
+    color: white;
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 21px;
+    margin: 0 0 12px;
+}
+
+.equipment-home-item p {
+    color: var(--eq-muted);
+    font-size: 13px;
+    line-height: 1.8;
+    margin: 0;
+}
+
+/* SÉCURITÉ */
+
+.equipment-safety {
+    background: #0d1117;
+}
+
+.equipment-safety-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.equipment-safety-grid > div {
+    padding: 25px;
+    background: var(--eq-card);
+    border: 1px solid var(--eq-border);
+    border-left: 3px solid var(--eq-orange);
+    border-radius: 8px;
+}
+
+.equipment-safety-grid h3 {
+    color: white;
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 22px;
+    margin: 0 0 12px;
+}
+
+.equipment-safety-grid p {
+    color: var(--eq-muted);
+    font-size: 13px;
+    line-height: 1.8;
+    margin: 0;
+}
+
+/* ÉLÉMENTS MASQUÉS PAR LE FILTRE */
+
+.equipment-product-card[hidden],
+.equipment-section[hidden],
+.equipment-empty[hidden] {
+    display: none !important;
+}
+
+/* RESPONSIVE TABLETTE */
+
+@media (max-width: 1000px) {
+    .equipment-category-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .equipment-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .equipment-filter-toolbar {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .equipment-filter-toolbar button {
+        grid-column: 1 / -1;
+    }
+}
+
+/* RESPONSIVE MOBILE */
+
+@media (max-width: 600px) {
+    .section-padding {
+        padding: 60px 0;
+    }
+
+    .equipment-hero {
+        min-height: 410px;
+        padding: 75px 0;
+        background-position: 60% center;
+    }
+
+    .equipment-hero h1 {
+        font-size: 49px;
+    }
+
+    .equipment-hero p {
+        font-size: 14px;
+    }
+
+    .equipment-category-grid,
+    .equipment-grid,
+    .equipment-home-grid,
+    .equipment-safety-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .equipment-category-card {
+        min-height: 175px;
+    }
+
+    .equipment-filter-toolbar {
+        grid-template-columns: 1fr;
+        padding: 12px;
+    }
+
+    .equipment-filter-toolbar button {
+        grid-column: auto;
+    }
+
+    .equipment-product-card::before {
+        height: 210px;
+    }
+
+    .equipment-card-content {
+        padding: 20px;
+    }
+
+    .equipment-intro h2,
+    .equipment-home h2,
+    .equipment-safety h2,
+    .section-heading h2 {
+        font-size: 35px;
+    }
+}
+
+
+/* =====================================================
+   IRON PULSE — IMAGES DES 45 ÉQUIPEMENTS
+   Complément des images déjà présentes
+===================================================== */
+
+/* MUSCULATION : équipements 05 à 15 */
+
+#musculation .equipment-product-card:nth-child(5)::before {
+    background-image: url("https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?auto=format&fit=crop&w=700&q=85");
+}
+
+#musculation .equipment-product-card:nth-child(6)::before {
+    background-image: url("https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=700&q=85");
+}
+
+#musculation .equipment-product-card:nth-child(7)::before {
+    background-image: url("https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=700&q=85");
+}
+
+#musculation .equipment-product-card:nth-child(8)::before {
+    background-image: url("https://images.unsplash.com/photo-1534367610401-9f5ed68180aa?auto=format&fit=crop&w=700&q=85");
+}
+
+#musculation .equipment-product-card:nth-child(9)::before {
+    background-image: url("https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=700&q=85");
+}
+
+#musculation .equipment-product-card:nth-child(10)::before {
+    background-image: url("https://images.unsplash.com/photo-1599058917212-d750089bc07c?auto=format&fit=crop&w=700&q=85");
+}
+
+#musculation .equipment-product-card:nth-child(11)::before {
+    background-image: url("https://images.unsplash.com/photo-1579758629938-03607ccdbaba?auto=format&fit=crop&w=700&q=85");
+}
+
+#musculation .equipment-product-card:nth-child(12)::before {
+    background-image: url("https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?auto=format&fit=crop&w=700&q=85");
+}
+
+#musculation .equipment-product-card:nth-child(13)::before {
+    background-image: url("https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=700&q=85");
+}
+
+#musculation .equipment-product-card:nth-child(14)::before {
+    background-image: url("https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=700&q=85");
+}
+
+#musculation .equipment-product-card:nth-child(15)::before {
+    background-image: url("https://images.unsplash.com/photo-1534367610401-9f5ed68180aa?auto=format&fit=crop&w=700&q=85");
+}
+
+
+/* CARDIO : équipements 04 à 15 */
+
+#cardio .equipment-product-card:nth-child(4)::before {
+    background-image: url("https://images.unsplash.com/photo-1576678927484-cc907957088c?auto=format&fit=crop&w=700&q=85");
+}
+
+#cardio .equipment-product-card:nth-child(5)::before {
+    background-image: url("https://images.unsplash.com/photo-1593079831268-3381b0db4a77?auto=format&fit=crop&w=700&q=85");
+}
+
+#cardio .equipment-product-card:nth-child(6)::before {
+    background-image: url("https://images.unsplash.com/photo-1540497077202-7c8a3999166f?auto=format&fit=crop&w=700&q=85");
+}
+
+#cardio .equipment-product-card:nth-child(7)::before {
+    background-image: url("https://images.unsplash.com/photo-1538805060514-97d9cc17730c?auto=format&fit=crop&w=700&q=85");
+}
+
+#cardio .equipment-product-card:nth-child(8)::before {
+    background-image: url("https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=700&q=85");
+}
+
+#cardio .equipment-product-card:nth-child(9)::before {
+    background-image: url("https://images.unsplash.com/photo-1599058917765-a780eda07a3e?auto=format&fit=crop&w=700&q=85");
+}
+
+#cardio .equipment-product-card:nth-child(10)::before {
+    background-image: url("https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=700&q=85");
+}
+
+#cardio .equipment-product-card:nth-child(11)::before {
+    background-image: url("https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=700&q=85");
+}
+
+#cardio .equipment-product-card:nth-child(12)::before {
+    background-image: url("https://images.unsplash.com/photo-1576678927484-cc907957088c?auto=format&fit=crop&w=700&q=85");
+}
+
+#cardio .equipment-product-card:nth-child(13)::before {
+    background-image: url("https://images.unsplash.com/photo-1593079831268-3381b0db4a77?auto=format&fit=crop&w=700&q=85");
+}
+
+#cardio .equipment-product-card:nth-child(14)::before {
+    background-image: url("https://images.unsplash.com/photo-1540497077202-7c8a3999166f?auto=format&fit=crop&w=700&q=85");
+}
+
+#cardio .equipment-product-card:nth-child(15)::before {
+    background-image: url("https://images.unsplash.com/photo-1538805060514-97d9cc17730c?auto=format&fit=crop&w=700&q=85");
+}
+
+
+/* ACCESSOIRES : équipements 04 à 15 */
+
+#accessoires .equipment-product-card:nth-child(4)::before {
+    background-image: url("https://images.unsplash.com/photo-1598289431512-b97b0917affc?auto=format&fit=crop&w=700&q=85");
+}
+
+#accessoires .equipment-product-card:nth-child(5)::before {
+    background-image: url("https://images.unsplash.com/photo-1599058917212-d750089bc07c?auto=format&fit=crop&w=700&q=85");
+}
+
+#accessoires .equipment-product-card:nth-child(6)::before {
+    background-image: url("https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=700&q=85");
+}
+
+#accessoires .equipment-product-card:nth-child(7)::before {
+    background-image: url("https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?auto=format&fit=crop&w=700&q=85");
+}
+
+#accessoires .equipment-product-card:nth-child(8)::before {
+    background-image: url("https://images.unsplash.com/photo-1599058917765-a780eda07a3e?auto=format&fit=crop&w=700&q=85");
+}
+
+#accessoires .equipment-product-card:nth-child(9)::before {
+    background-image: url("https://images.unsplash.com/photo-1593079831268-3381b0db4a77?auto=format&fit=crop&w=700&q=85");
+}
+
+#accessoires .equipment-product-card:nth-child(10)::before {
+    background-image: url("https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=700&q=85");
+}
+
+#accessoires .equipment-product-card:nth-child(11)::before {
+    background-image: url("https://images.unsplash.com/photo-1598289431512-b97b0917affc?auto=format&fit=crop&w=700&q=85");
+}
+
+#accessoires .equipment-product-card:nth-child(12)::before {
+    background-image: url("https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=700&q=85");
+}
+
+#accessoires .equipment-product-card:nth-child(13)::before {
+    background-image: url("https://images.unsplash.com/photo-1599058917212-d750089bc07c?auto=format&fit=crop&w=700&q=85");
+}
+
+#accessoires .equipment-product-card:nth-child(14)::before {
+    background-image: url("https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?auto=format&fit=crop&w=700&q=85");
+}
+
+#accessoires .equipment-product-card:nth-child(15)::before {
+    background-image: url("https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=700&q=85");
+}

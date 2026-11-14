@@ -1,0 +1,918 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Équipements | IRON PULSE</title>
+    <meta name="description" content="Découvre 45 équipements de musculation, de cardio et accessoires sportifs avec IRON PULSE.">
+
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../css/equipements.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container header-container">
+            <a href="../index.html" class="logo">IRON <span>PULSE</span></a>
+
+            <nav class="nav">
+                <a href="../index.html">Accueil</a>
+                <a href="programmes.html">Programmes</a>
+                <a href="exercices.html">Exercices</a>
+                <a href="nutrition.html">Nutrition</a>
+                <a href="equipements.html" class="active">Équipements</a>
+                <a href="conseils.html">Conseils</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- HERO -->
+        <section class="equipment-hero">
+            <div class="container">
+                <span class="section-tag">LE MATÉRIEL</span>
+                <h1>TON <span>ÉQUIPEMENT</span></h1>
+                <p>
+                    Découvre le matériel, comprends son utilité et apprends
+                    à choisir les équipements adaptés à tes entraînements.
+                </p>
+            </div>
+        </section>
+
+        <!-- INTRODUCTION -->
+        <section class="equipment-intro section-padding">
+            <div class="container">
+                <span class="section-tag">BIEN S'ÉQUIPER</span>
+                <h2>LE BON MATÉRIEL FAIT <span>LA DIFFÉRENCE</span></h2>
+
+                <p>
+                    Il existe de nombreux équipements pour pratiquer une activité
+                    physique. Certains permettent de travailler avec des charges,
+                    d'autres améliorent l'endurance ou facilitent les exercices
+                    au poids du corps.
+                </p>
+
+                <p>
+                    L'essentiel est de comprendre leur fonctionnement, de respecter
+                    les consignes de sécurité et d'utiliser un matériel adapté
+                    à son niveau.
+                </p>
+            </div>
+        </section>
+
+        <!-- CATÉGORIES -->
+        <section class="equipment-categories section-padding">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="section-tag">EXPLORER</span>
+                    <h2>NOS <span>CATÉGORIES</span></h2>
+                </div>
+
+                <div class="equipment-category-grid">
+
+                    <a href="#musculation" class="equipment-category-card">
+                        <span class="category-number">01</span>
+                        <h3>MUSCULATION</h3>
+                        <p>15 équipements pour le renforcement musculaire.</p>
+                        <span class="category-link">DÉCOUVRIR →</span>
+                    </a>
+
+                    <a href="#cardio" class="equipment-category-card">
+                        <span class="category-number">02</span>
+                        <h3>CARDIO</h3>
+                        <p>15 appareils dédiés à l'endurance.</p>
+                        <span class="category-link">DÉCOUVRIR →</span>
+                    </a>
+
+                    <a href="#accessoires" class="equipment-category-card">
+                        <span class="category-number">03</span>
+                        <h3>ACCESSOIRES</h3>
+                        <p>15 accessoires pour compléter tes séances.</p>
+                        <span class="category-link">DÉCOUVRIR →</span>
+                    </a>
+
+                    <a href="#maison" class="equipment-category-card">
+                        <span class="category-number">04</span>
+                        <h3>HOME TRAINING</h3>
+                        <p>Aménager un espace d'entraînement chez soi.</p>
+                        <span class="category-link">DÉCOUVRIR →</span>
+                    </a>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- RECHERCHE ET FILTRES -->
+        <section class="equipment-filters section-padding">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="section-tag">CATALOGUE</span>
+                    <h2>RECHERCHE TON <span>MATÉRIEL</span></h2>
+                    <p>Explore les 45 équipements avec la recherche ou les filtres.</p>
+                </div>
+
+                <div class="equipment-filter-toolbar">
+                    <input
+                        type="search"
+                        id="equipment-search"
+                        placeholder="Rechercher un équipement..."
+                        aria-label="Rechercher un équipement"
+                    >
+
+                    <select id="equipment-category" aria-label="Filtrer par catégorie">
+                        <option value="all">Toutes les catégories</option>
+                        <option value="musculation">Musculation</option>
+                        <option value="cardio">Cardio</option>
+                        <option value="accessoires">Accessoires</option>
+                    </select>
+
+                    <button type="button" id="equipment-reset">
+                        RÉINITIALISER
+                    </button>
+                </div>
+
+                <p id="equipment-count" class="equipment-count" aria-live="polite">
+                    45 équipements affichés
+                </p>
+
+                <p id="equipment-empty" class="equipment-empty" hidden>
+                    Aucun équipement ne correspond à ta recherche.
+                </p>
+            </div>
+        </section>
+
+        <!-- =================================
+             MUSCULATION : 15 ÉQUIPEMENTS
+        ================================== -->
+        <section class="equipment-section section-padding" id="musculation">
+            <div class="container">
+
+                <div class="section-heading">
+                    <span class="section-tag">CATÉGORIE 01 — 15 ÉQUIPEMENTS</span>
+                    <h2>ÉQUIPEMENTS DE <span>MUSCULATION</span></h2>
+                    <p>Découvre les charges libres, les machines et les équipements de renforcement.</p>
+                </div>
+
+                <div class="equipment-grid">
+
+                    <article class="equipment-product-card" data-category="musculation">
+                        <div class="equipment-card-number">01</div>
+                        <div class="equipment-card-content">
+                            <span class="equipment-type">CHARGES LIBRES</span>
+                            <h3>HALTÈRES</h3>
+                            <p>Les haltères permettent de réaliser de nombreux mouvements avec une ou deux mains.</p>
+                            <ul>
+                                <li>Différents poids disponibles</li>
+                                <li>Utilisation polyvalente</li>
+                                <li>Charges réglables selon les modèles</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="equipment-product-card" data-category="musculation">
+                        <div class="equipment-card-number">02</div>
+                        <div class="equipment-card-content">
+                            <span class="equipment-type">CHARGES LIBRES</span>
+                            <h3>BARRE DE MUSCULATION</h3>
+                            <p>La barre permet de réaliser des exercices avec des disques de poids.</p>
+                            <ul>
+                                <li>Différents formats disponibles</li>
+                                <li>Utilisée avec des disques</li>
+                                <li>Demande une bonne maîtrise technique</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="equipment-product-card" data-category="musculation">
+                        <div class="equipment-card-number">03</div>
+                        <div class="equipment-card-content">
+                            <span class="equipment-type">INSTALLATION</span>
+                            <h3>BANC DE MUSCULATION</h3>
+                            <p>Le banc offre un support stable pour effectuer des exercices assis ou allongés.</p>
+                            <ul>
+                                <li>Modèles plats ou inclinables</li>
+                                <li>Utilisé avec des haltères ou une barre</li>
+                                <li>Doit être stable et bien installé</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="equipment-product-card" data-category="musculation">
+                        <div class="equipment-card-number">04</div>
+                        <div class="equipment-card-content">
+                            <span class="equipment-type">MACHINES</span>
+                            <h3>MACHINES GUIDÉES</h3>
+                            <p>Ces machines accompagnent le mouvement grâce à un parcours guidé.</p>
+                            <ul>
+                                <li>Mouvements encadrés</li>
+                                <li>Réglages selon l'utilisateur</li>
+                                <li>Consignes à respecter</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="equipment-product-card" data-category="musculation">
+                        <div class="equipment-card-number">05</div>
+                        <div class="equipment-card-content">
+                            <span class="equipment-type">CHARGES LIBRES</span>
+                            <h3>DISQUES DE POIDS</h3>
+                            <p>Les disques se placent sur des barres compatibles pour ajuster la charge utilisée.</p>
+                            <ul>
+                                <li>Plusieurs poids disponibles</li>
+                                <li>Différents diamètres</li>
+                                <li>À fixer avec des colliers adaptés</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="equipment-product-card" data-category="musculation">
+                        <div class="equipment-card-number">06</div>
+                        <div class="equipment-card-content">
+                            <span class="equipment-type">MACHINES</span>
+                            <h3>POULIE VIS-À-VIS</h3>
+                            <p>La poulie permet de réaliser des mouvements avec une résistance par câble.</p>
+                            <ul>
+                                <li>Hauteur réglable</li>
+                                <li>Différentes poignées compatibles</li>
+                                <li>Résistance guidée par câble</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="equipment-product-card" data-category="musculation">
+                        <div class="equipment-card-number">07</div>
+                        <div class="equipment-card-content">
+                            <span class="equipment-type">MACHINES</span>
+                            <h3>PRESSE À CUISSES</h3>
+                            <p>Cette machine permet de réaliser un mouvement de poussée des jambes.</p>
+                            <ul>
+                                <li>Plateforme pour les pieds</li>
+                                <li>Dossier et siège réglables selon le modèle</li>
+                                <li>Utilisation avec consignes adaptées</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="equipment-product-card" data-category="musculation">
+                        <div class="equipment-card-number">08</div>
+                        <div class="equipment-card-content">
+                            <span class="equipment-type">MACHINES</span>
+                            <h3>SMITH MACHINE</h3>
+                            <p>La machine Smith utilise une barre guidée sur des rails verticaux.</p>
+                            <ul>
+                                <li>Barre guidée</li>
+                                <li>Crochets de sécurité</li>
+                                <li>Installation à vérifier avant usage</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="equipment-product-card" data-category="musculation">
+                        <div class="equipment-card-number">09</div>
+                        <div class="equipment-card-content">
+                            <span class="equipment-type">CHARGES LIBRES</span>
+                            <h3>KETTLEBELL</h3>
+                            <p>La kettlebell est une charge en forme de boule munie d'une poignée.</p>
+                            <ul>
+                                <li>Poignée intégrée</li>
+                                <li>Différents poids disponibles</li>
+                                <li>Utilisée dans plusieurs disciplines</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="equipment-product-card" data-category="musculation">
+                        <div class="equipment-card-number">10</div>
+                        <div class="equipment-card-content">
+                            <span class="equipment-type">MACHINES</span>
+                            <h3>BARRE DE TRACTION</h3>
+                            <p>La barre de traction est conçue pour les exercices de suspension et de traction.</p>
+                            <ul>
+                                <li>Fixation murale ou sur structure</li>
+                                <li>Différentes prises possibles</li>
+                                <li>Fixation à vérifier régulièrement</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="equipment-product-card" data-category="musculation">
+                        <div class="equipment-card-number">11</div>
+                        <div class="equipment-card-content">
+                            <span class="equipment-type">MACHINES</span>
+                            <h3>LAT PULLDOWN</h3>
+                            <p>Cette machine utilise une barre reliée à une charge par un câble.</p>
+                            <ul>
+                                <li>Siège généralement réglable</li>
+                                <li>Barre de tirage</li>
+                                <li>Mouvement guidé</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="equipment-product-card" data-category="musculation">
+                        <div class="equipment-card-number">12</div>
+                        <div class="equipment-card-content">
+                            <span class="equipment-type">MACHINES</span>
+                            <h3>LEG EXTENSION</h3>
+                            <p>La machine permet de réaliser une extension des jambes en position assise.</p>
+                            <ul>
+                                <li>Assise réglable</li>
+                                <li>Rouleau de maintien</li>
+                                <li>Amplitude à adapter</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="equipment-product-card" data-category="musculation">
+                        <div class="equipment-card-number">13</div>
+                        <div class="equipment-card-content">
+                            <span class="equipment-type">MACHINES</span>
+                            <h3>LEG CURL</h3>
+                            <p>Le leg curl est une machine conçue pour les mouvements de flexion des jambes.</p>
+                            <ul>
+                                <li>Versions assise ou allongée</li>
+                                <li>Rouleaux réglables</li>
+                                <li>Positionnement important</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="equipment-product-card" data-category="musculation">
+                        <div class="equipment-card-number">14</div>
+                        <div class="equipment-card-content">
+                            <span class="equipment-type">CHARGES LIBRES</span>
+                            <h3>BARRE EZ</h3>
+                            <p>Cette barre possède une forme ondulée qui offre plusieurs positions de prise.</p>
+                            <ul>
+                                <li>Prise différente d'une barre droite</li>
+                                <li>Utilisée avec des disques</li>
+                                <li>Poids et dimensions variables</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="equipment-product-card" data-category="musculation">
+                        <div class="equipment-card-number">15</div>
+                        <div class="equipment-card-content">
+                            <span class="equipment-type">MACHINES</span>
+                            <h3>STATION MULTIFONCTION</h3>
+                            <p>Une station regroupe plusieurs postes de travail sur une même structure.</p>
+                            <ul>
+                                <li>Plusieurs exercices possibles</li>
+                                <li>Différents systèmes de résistance</li>
+                                <li>Notice d'utilisation indispensable</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- =================================
+             CARDIO : 15 ÉQUIPEMENTS
+        ================================== -->
+        <section class="equipment-section equipment-section-alt section-padding" id="cardio">
+            <div class="container">
+
+                <div class="section-heading">
+                    <span class="section-tag">CATÉGORIE 02 — 15 ÉQUIPEMENTS</span>
+                    <h2>ÉQUIPEMENTS DE <span>CARDIO</span></h2>
+                    <p>Découvre les appareils conçus pour pratiquer différentes activités d'endurance.</p>
+                </div>
+
+                <div class="equipment-grid">
+
+                    <article class="equipment-product-card" data-category="cardio">
+                        <div class="equipment-card-number">16</div>
+                        <div class="equipment-card-content">
+                            <span class="equipment-type">ENDURANCE</span>
+                            <h3>TAPIS DE COURSE</h3>
+                            <p>Le tapis permet de marcher ou courir en intérieur avec une vitesse réglable.</p>
+                            <ul>
+                                <li>Vitesse ajustable</li>
+                                <li>Inclinaison sur certains modèles</li>
+                                <li>Arrêt de sécurité à connaître</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="equipment-product-card" data-category="cardio">
+                        <div class="equipment-card-number">17</div>
+                        <div class="equipment-card-content">
+                            <span class="equipment-type">ENDURANCE</span>
+                            <h3>VÉLO D'APPARTEMENT</h3>
+                            <p>Il reproduit le mouvement du pédalage dans un environnement intérieur.</p>
+                            <ul>
+                                <li>Résistance réglable</li>
+                                <li>Réglage de la selle</li>
+                                <li>Différents programmes possibles</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="equipment-product-card" data-category="cardio">
+                        <div class="equipment-card-number">18</div>
+                        <div class="equipment-card-content">
+                            <span class="equipment-type">ENDURANCE</span>
+                            <h3>RAMEUR</h3>
+                            <p>Le rameur reproduit le mouvement de l'aviron et sollicite plusieurs parties du corps.</p>
+                            <ul>
+                                <li>Travail de coordination</li>
+                                <li>Résistance variable</li>
+                                <li>Technique à apprendre progressivement</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="equipment-product-card" data-category="cardio">
+                        <div class="equipment-card-number">19</div>
+                        <div class="equipment-card-content">
+                            <span class="equipment-type">ENDURANCE</span>
+                            <h3>VÉLO ELLIPTIQUE</h3>
+                            <p>L'elliptique combine un mouvement des jambes et des bras sur des pédales mobiles.</p>
+                            <ul>
+                                <li>Mouvement fluide</li>
+                                <li>Poignées mobiles</li>
+                                <li>Résistance ajustable</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="equipment-product-card" data-category="cardio">
+                        <div class="equipment-card-number">20</div>
+                        <div class="equipment-card-content">
+                            <span class="equipment-type">ENDURANCE</span>
+                            <h3>VÉLO DE SPINNING</h3>
+                            <p>Ce vélo est conçu pour les séances de cyclisme en intérieur.</p>
+                            <ul>
+                                <li>Volant d'inertie</li>
+                                <li>Selle et guidon réglables</li>
+                                <li>Résistance ajustable</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="equipment-product-card" data-category="cardio">
+                        <div class="equipment-card-number">21</div>
+                        <div class="equipment-card-content">
+                            <span class="equipment-type">ENDURANCE</span>
+                            <h3>STEPPER</h3>
+                            <p>Le stepper reproduit un mouvement de montée de marches.</p>
+                            <ul>
+                                <li>Pédales indépendantes ou liées</li>
+                                <li>Format compact selon le modèle</li>
+                                <li>Appuis stables recommandés</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="equipment-product-card" data-category="cardio">
+                        <div class="equipment-card-number">22</div>
+                        <div class="equipment-card-content">
+                            <span class="equipment-type">ENDURANCE</span>
+                            <h3>ESCALIER FITNESS</h3>
+                            <p>Cet appareil reproduit la montée continue de marches.</p>
+                            <ul>
+                                <li>Marches en mouvement</li>
+                                <li>Vitesse réglable</li>
+                                <li>Utilisation avec attention</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="equipment-product-card" data-category="cardio">
+                        <div class="equipment-card-number">23</div>
+                        <div class="equipment-card-content">
+                            <span class="equipment-type">ENDURANCE</span>
+                            <h3>AIR BIKE</h3>
+                            <p>Ce vélo utilise un grand ventilateur pour créer une résistance liée au pédalage.</p>
+                            <ul>
+                                <li>Résistance à air</li>
+                                <li>Bras mobiles</li>
+                                <li>Intensité liée à l'effort fourni</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="equipment-product-card" data-category="cardio">
+                        <div class="equipment-card-number">24</div>
+                        <div class="equipment-card-content">
+                            <span class="equipment-type">ENDURANCE</span>
+                            <h3>SKI ERG</h3>
+                            <p>Le SkiErg reproduit le mouvement des bras utilisé en ski de fond.</p>
+                            <ul>
+                                <li>Deux poignées reliées à des câbles</li>
+                                <li>Résistance réglable</li>
+                                <li>Travail de coordination</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="equipment-product-card" data-category="cardio">
+                        <div class="equipment-card-number">25</div>
+                        <div class="equipment-card-content">
+                            <span class="equipment-type">ENDURANCE</span>
+                            <h3>VÉLO À BRAS</h3>
+                            <p>Cet appareil permet de pédaler avec les bras depuis une position assise.</p>
+                            <ul>
+                                <li>Poignées rotatives</li>
+                                <li>Résistance ajustable</li>
+                                <li>Position de travail réglable</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="equipment-product-card" data-category="cardio">
+                        <div class="equipment-card-number">26</div>
+                        <div class="equipment-card-content">
+                            <span class="equipment-type">ENDURANCE</span>
+                            <h3>TAPIS INCURVÉ</h3>
+                            <p>Ce tapis possède une surface courbe et fonctionne généralement sans moteur.</p>
+                            <ul>
+                                <li>Surface incurvée</li>
+                                <li>Vitesse contrôlée par l'utilisateur</li>
+                                <li>Apprentissage nécessaire</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="equipment-product-card" data-category="cardio">
+                        <div class="equipment-card-number">27</div>
+                        <div class="equipment-card-content">
+                            <span class="equipment-type">ENDURANCE</span>
+                            <h3>VÉLO SEMI-ALLONGÉ</h3>
+                            <p>Le vélo semi-allongé dispose d'un siège avec dossier et d'une position de pédalage particulière.</p>
+                            <ul>
+                                <li>Dossier intégré</li>
+                                <li>Position assise confortable</li>
+                                <li>Réglage de la distance des pédales</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="equipment-product-card" data-category="cardio">
+                        <div class="equipment-card-number">28</div>
+                        <div class="equipment-card-content">
+                            <span class="equipment-type">ENDURANCE</span>
+                            <h3>ERGOMÈTRE</h3>
+                            <p>Un ergomètre mesure et affiche des données liées à l'effort fourni sur un appareil.</p>
+                            <ul>
+                                <li>Mesure de la puissance</li>
+                                <li>Données affichées à l'écran</li>
+                                <li>Différents appareils compatibles</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="equipment-product-card" data-category="cardio">
+                        <div class="equipment-card-number">29</div>
+                        <div class="equipment-card-content">
+                            <span class="equipment-type">ENDURANCE</span>
+                            <h3>VÉLO DE FAN BIKE</h3>
+                            <p>Le fan bike utilise une roue ventilateur et des poignées mobiles pour coordonner bras et jambes.</p>
+                            <ul>
+                                <li>Ventilateur frontal</li>
+                                <li>Poignées mobiles</li>
+                                <li>Résistance progressive à l'effort</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="equipment-product-card" data-category="cardio">
+                        <div class="equipment-card-number">30</div>
+                        <div class="equipment-card-content">
+                            <span class="equipment-type">ENDURANCE</span>
+                            <h3>PLATEFORME DE MARCHE</h3>
+                            <p>Une plateforme de marche motorisée permet de pratiquer la marche en intérieur.</p>
+                            <ul>
+                                <li>Format parfois pliable</li>
+                                <li>Vitesse adaptée à la marche</li>
+                                <li>Surface à garder dégagée</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- =================================
+             ACCESSOIRES : 15 ÉQUIPEMENTS
+        ================================== -->
+        <section class="equipment-section section-padding" id="accessoires">
+            <div class="container">
+
+                <div class="section-heading">
+                    <span class="section-tag">CATÉGORIE 03 — 15 ÉQUIPEMENTS</span>
+                    <h2>LES <span>ACCESSOIRES</span></h2>
+                    <p>Des accessoires pratiques pour compléter et organiser les séances.</p>
+                </div>
+
+                <div class="equipment-grid">
+
+                    <article class="equipment-product-card" data-category="accessoires">
+                        <div class="equipment-card-number">31</div>
+                        <div class="equipment-card-content">
+                            <span class="equipment-type">RÉSISTANCE</span>
+                            <h3>ÉLASTIQUES</h3>
+                            <p>Les bandes élastiques apportent une résistance lors de nombreux mouvements.</p>
+                            <ul>
+                                <li>Différents niveaux de résistance</li>
+                                <li>Faciles à transporter</li>
+                                <li>Utilisation polyvalente</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="equipment-product-card" data-category="accessoires">
+                        <div class="equipment-card-number">32</div>
+                        <div class="equipment-card-content">
+                            <span class="equipment-type">CONFORT</span>
+                            <h3>TAPIS DE SOL</h3>
+                            <p>Le tapis apporte une surface confortable pour les exercices réalisés au sol.</p>
+                            <ul>
+                                <li>Différentes épaisseurs</li>
+                                <li>Surface antidérapante selon le modèle</li>
+                                <li>Facile à ranger</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="equipment-product-card" data-category="accessoires">
+                        <div class="equipment-card-number">33</div>
+                        <div class="equipment-card-content">
+                            <span class="equipment-type">COORDINATION</span>
+                            <h3>CORDE À SAUTER</h3>
+                            <p>La corde à sauter permet de pratiquer une activité dynamique et coordonnée.</p>
+                            <ul>
+                                <li>Longueur à adapter</li>
+                                <li>Différents modèles disponibles</li>
+                                <li>Prévoir un espace dégagé</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="equipment-product-card" data-category="accessoires">
+                        <div class="equipment-card-number">34</div>
+                        <div class="equipment-card-content">
+                            <span class="equipment-type">PROTECTION</span>
+                            <h3>GANTS DE MUSCULATION</h3>
+                            <p>Les gants peuvent apporter une protection supplémentaire au niveau des mains.</p>
+                            <ul>
+                                <li>Différentes tailles</li>
+                                <li>Matériaux variés</li>
+                                <li>Nettoyage régulier conseillé</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="equipment-product-card" data-category="accessoires">
+                        <div class="equipment-card-number">35</div>
+                        <div class="equipment-card-content">
+                            <span class="equipment-type">HYDRATATION</span>
+                            <h3>GOURDE SPORTIVE</h3>
+                            <p>La gourde permet de transporter de l'eau pendant une activité physique.</p>
+                            <ul>
+                                <li>Différentes contenances</li>
+                                <li>Matériaux variés</li>
+                                <li>Nettoyage régulier nécessaire</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="equipment-product-card" data-category="accessoires">
+                        <div class="equipment-card-number">36</div>
+                        <div class="equipment-card-content">
+                            <span class="equipment-type">RANGEMENT</span>
+                            <h3>SAC DE SPORT</h3>
+                            <p>Le sac de sport permet de transporter les affaires et les accessoires d'entraînement.</p>
+                            <ul>
+                                <li>Compartiments de rangement</li>
+                                <li>Différentes tailles</li>
+                                <li>Modèles avec compartiment chaussures</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="equipment-product-card" data-category="accessoires">
+                        <div class="equipment-card-number">37</div>
+                        <div class="equipment-card-content">
+                            <span class="equipment-type">MOBILITÉ</span>
+                            <h3>ROULEAU DE MASSAGE</h3>
+                            <p>Le rouleau en mousse est utilisé dans certaines routines de mobilité et de récupération.</p>
+                            <ul>
+                                <li>Différentes densités</li>
+                                <li>Surfaces lisses ou texturées</li>
+                                <li>Utilisation sans douleur forcée</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="equipment-product-card" data-category="accessoires">
+                        <div class="equipment-card-number">38</div>
+                        <div class="equipment-card-content">
+                            <span class="equipment-type">PROTECTION</span>
+                            <h3>CEINTURE DE MAINTIEN</h3>
+                            <p>Certaines ceintures sont conçues pour apporter un soutien lors de mouvements spécifiques.</p>
+                            <ul>
+                                <li>Différentes tailles</li>
+                                <li>Modèles et usages variés</li>
+                                <li>Ne remplace pas une bonne technique</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="equipment-product-card" data-category="accessoires">
+                        <div class="equipment-card-number">39</div>
+                        <div class="equipment-card-content">
+                            <span class="equipment-type">PRÉHENSION</span>
+                            <h3>STRAPS DE TIRAGE</h3>
+                            <p>Les straps sont des accessoires qui s'enroulent autour d'une barre pour faciliter la prise.</p>
+                            <ul>
+                                <li>Différents matériaux</li>
+                                <li>Plusieurs formats</li>
+                                <li>Apprentissage de l'utilisation nécessaire</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="equipment-product-card" data-category="accessoires">
+                        <div class="equipment-card-number">40</div>
+                        <div class="equipment-card-content">
+                            <span class="equipment-type">PROTECTION</span>
+                            <h3>GENOUILLÈRES SPORTIVES</h3>
+                            <p>Les genouillères peuvent apporter une sensation de maintien pendant certaines activités.</p>
+                            <ul>
+                                <li>Différents niveaux de maintien</li>
+                                <li>Tailles à choisir correctement</li>
+                                <li>Ne remplacent pas un avis médical</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="equipment-product-card" data-category="accessoires">
+                        <div class="equipment-card-number">41</div>
+                        <div class="equipment-card-content">
+                            <span class="equipment-type">MOBILITÉ</span>
+                            <h3>BLOC DE YOGA</h3>
+                            <p>Le bloc de yoga sert de support pour certaines postures et exercices de mobilité.</p>
+                            <ul>
+                                <li>Mousse ou liège</li>
+                                <li>Différentes dimensions</li>
+                                <li>Surface stable</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="equipment-product-card" data-category="accessoires">
+                        <div class="equipment-card-number">42</div>
+                        <div class="equipment-card-content">
+                            <span class="equipment-type">MOBILITÉ</span>
+                            <h3>SANGLE D'ÉTIREMENT</h3>
+                            <p>La sangle peut accompagner certains exercices de mobilité et d'assouplissement.</p>
+                            <ul>
+                                <li>Longueur variable</li>
+                                <li>Différentes prises possibles</li>
+                                <li>Ne pas forcer les amplitudes</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="equipment-product-card" data-category="accessoires">
+                        <div class="equipment-card-number">43</div>
+                        <div class="equipment-card-content">
+                            <span class="equipment-type">ÉQUILIBRE</span>
+                            <h3>PLATEAU D'ÉQUILIBRE</h3>
+                            <p>Ce plateau instable permet de pratiquer différents exercices d'équilibre et de coordination.</p>
+                            <ul>
+                                <li>Différentes formes</li>
+                                <li>Surface antidérapante</li>
+                                <li>À utiliser dans un espace sécurisé</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="equipment-product-card" data-category="accessoires">
+                        <div class="equipment-card-number">44</div>
+                        <div class="equipment-card-content">
+                            <span class="equipment-type">COORDINATION</span>
+                            <h3>ÉCHELLE DE RYTHME</h3>
+                            <p>L'échelle de rythme est utilisée pour organiser des exercices de déplacement et de coordination.</p>
+                            <ul>
+                                <li>Échelons réglables</li>
+                                <li>Installation au sol</li>
+                                <li>Utilisable en extérieur ou intérieur</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="equipment-product-card" data-category="accessoires">
+                        <div class="equipment-card-number">45</div>
+                        <div class="equipment-card-content">
+                            <span class="equipment-type">RÉSISTANCE</span>
+                            <h3>MINI-BANDES</h3>
+                            <p>Les mini-bandes sont de petits élastiques fermés utilisés dans différents exercices.</p>
+                            <ul>
+                                <li>Format compact</li>
+                                <li>Plusieurs résistances</li>
+                                <li>Faciles à transporter</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- HOME TRAINING -->
+        <section class="equipment-home section-padding" id="maison">
+            <div class="container">
+                <span class="section-tag">HOME TRAINING</span>
+                <h2>S'ENTRAÎNER <span>À LA MAISON</span></h2>
+
+                <p>
+                    Il est possible de pratiquer une activité physique chez soi
+                    sans disposer d'une salle complète. Un espace dégagé et
+                    quelques accessoires peuvent suffire pour réaliser des
+                    exercices simples.
+                </p>
+
+                <div class="equipment-home-grid">
+                    <div class="equipment-home-item">
+                        <h3>01 — UN ESPACE ADAPTÉ</h3>
+                        <p>
+                            Choisis un endroit suffisamment dégagé pour bouger
+                            sans risquer de heurter des meubles ou des objets.
+                        </p>
+                    </div>
+
+                    <div class="equipment-home-item">
+                        <h3>02 — DU MATÉRIEL SIMPLE</h3>
+                        <p>
+                            Un tapis de sol ou des élastiques peuvent compléter
+                            une séance réalisée à la maison.
+                        </p>
+                    </div>
+
+                    <div class="equipment-home-item">
+                        <h3>03 — DE LA SÉCURITÉ</h3>
+                        <p>
+                            Vérifie l'état du matériel, respecte les consignes
+                            et demande conseil en cas de doute sur un exercice.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SÉCURITÉ -->
+        <section class="equipment-safety section-padding">
+            <div class="container">
+                <span class="section-tag">À RETENIR</span>
+                <h2>LA SÉCURITÉ AVANT <span>TOUT</span></h2>
+
+                <div class="equipment-safety-grid">
+                    <div>
+                        <h3>Vérifier le matériel</h3>
+                        <p>Un équipement doit être en bon état et correctement installé.</p>
+                    </div>
+
+                    <div>
+                        <h3>Apprendre les mouvements</h3>
+                        <p>Une bonne technique est essentielle avant d'utiliser du matériel.</p>
+                    </div>
+
+                    <div>
+                        <h3>Respecter les consignes</h3>
+                        <p>Les instructions du fabricant et l'encadrement doivent être respectés.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <a href="../index.html" class="logo">IRON <span>PULSE</span></a>
+            <p>Construis de bonnes habitudes. Progresse à ton rythme.</p>
+            <p class="footer-copy">© 2026 IRON PULSE — Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+    <script src="../js/equipements.js"></script>
+
+</body>
+</html>
